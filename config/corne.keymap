@@ -23,7 +23,7 @@
         };
 
         combo_SHIFT {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&gresc>;
             key-positions = <13 14>;
         };
 
@@ -119,15 +119,18 @@
     };
 
     behaviors {
-        custom_behavior: custom_behavior {
+        new_behavior: new_behavior {
             compatible = "zmk,behavior-hold-tap";
-            label = "CUSTOM_BEHAVIOR";
+            label = "NEW_BEHAVIOR";
             bindings =
                 <&mo>,
                 <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <50>;
+            tapping-term-ms = <200>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 12 13 14 15 16 17 18 19 20 24 25 26 27 28 29 30 31 32>;
         };
     };
 
@@ -142,10 +145,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-  &kp TAB  &kp V  &kp W     &kp F  &kp P                 &kp G      &kp Y  &kp U      &kp I    &kp O     &kp P  &kp BSPC
-&kp LCTRL  &kp A  &kp O     &kp E  &kp T                 &kp M      &kp H  &kp J      &kp K    &kp L  &kp SEMI   &kp SQT
-&kp LSHFT  &kp B  &kp U     &kp C  &kp D                 &kp Y      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp ESC
-                         &kp BSPC  &mo 5  &mt LEFT_SHIFT SPACE    &kp RET  &mo 2   &kp RALT
+  &kp TAB  &kp V  &kp W     &kp F                  &kp P                 &kp G      &kp Y  &kp U      &kp I    &kp O     &kp P  &kp BSPC
+&kp LCTRL  &kp A  &kp O     &kp E                  &kp T                 &kp M      &kp H  &kp J      &kp K    &kp L  &kp SEMI   &kp SQT
+&kp LSHFT  &kp B  &kp U     &kp C                  &kp D                 &kp Y      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp ESC
+                         &kp BSPC  &new_behavior 5 LCTRL  &mt LEFT_SHIFT SPACE    &kp RET  &mo 2   &kp RALT
             >;
         };
 
