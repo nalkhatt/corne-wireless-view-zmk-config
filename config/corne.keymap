@@ -167,10 +167,44 @@
             label = "TEST";
             bindings =
                 <&sk>,
-                <&kp>;
+                <&sk>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
+        };
+        layer2_toggle_y: layer2_toggle_y {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER2_TOGGLE_Y";
+            #binding-cells = <0>;
+            bindings =
+                <&kp Y>,
+                <&to 2>;
+        };
+        layer3_toggle_h: layer3_toggle_h {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER3_TOGGLE_H";
+            #binding-cells = <0>;
+            bindings =
+                <&kp H>,
+                <&to 3>;
+        };
+        layer4_toggle_n: layer4_toggle_n {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER4_TOGGLE_N";
+            #binding-cells = <0>;
+            bindings =
+                <&kp N>,
+                <&to 4>;
+        };
+        space_hold: space_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_HOLD";
+            bindings =
+                <&tog>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -185,19 +219,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-  &kp TAB  &kp Q  &kp W                 &kp E          &kp R            &kp T      &kp Y  &kp U      &kp I    &kp O     &kp P  &kp BSPC
-&kp LCTRL  &kp A  &kp S                 &kp D          &kp F            &kp G      &kp H  &kp J      &kp K    &kp L  &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z  &kp X                 &kp C          &kp V            &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp ESC
-                         &test LEFT_ALT RCTRL  &kp BACKSPACE  &space_tapdance    &kp RET  &mo 0   &kp RALT
+  &kp TAB  &kp Q  &kp W                 &kp E          &kp R                &kp T      &kp Y  &kp U      &kp I    &kp O     &kp P  &kp BSPC
+&kp LCTRL  &kp A  &kp S                 &kp D          &kp F                &kp G      &kp H  &kp J      &kp K    &kp L  &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z  &kp X                 &kp C          &kp V                &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp ESC
+                         &test LEFT_ALT RCTRL  &kp BACKSPACE  &space_hold 1 SPACE    &kp RET  &mo 0   &kp RALT
             >;
         };
 
         Base_1 {
             bindings = <
-&none     &kp P    &kp O           &kp I    &kp U   &kp Y    &trans  &trans  &trans  &trans  &trans  &trans
-&none  &kp SEMI    &kp L           &kp K    &kp J   &kp H    &trans  &trans  &trans  &trans  &trans  &trans
-&none  &kp FSLH  &kp DOT       &kp COMMA    &kp M   &kp N    &trans  &trans  &trans  &trans  &trans  &trans
-                          &layer0_toggle  &kp TAB  &trans    &trans  &trans  &trans
+&none     &kp P    &kp O           &kp I    &kp U  &layer2_toggle_y    &trans  &trans  &trans  &trans  &trans  &trans
+&none  &kp SEMI    &kp L           &kp K    &kp J  &layer3_toggle_h    &trans  &trans  &trans  &trans  &trans  &trans
+&none  &kp FSLH  &kp DOT       &kp COMMA    &kp M  &layer4_toggle_n    &trans  &trans  &trans  &trans  &trans  &trans
+                          &layer0_toggle  &kp TAB            &trans    &trans  &trans  &trans
             >;
         };
 
