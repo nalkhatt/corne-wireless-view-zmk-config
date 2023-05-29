@@ -12,12 +12,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_H {
-            bindings = <&kp H>;
-            key-positions = <14 15>;
-            timeout-ms = <50>;
-        };
-
         combo_I {
             bindings = <&kp CAPSLOCK>;
             key-positions = <15 16>;
@@ -155,10 +149,10 @@
 
         Base_1 {
             bindings = <
-&none     &kp P    &kp O      &kp I    &kp U  &layer2_toggle_y    &trans  &trans  &trans  &trans  &trans  &trans
-&none  &kp SEMI    &kp L      &kp K    &kp J  &layer3_toggle_h    &trans  &trans  &trans  &trans  &trans  &trans
-&none  &kp FSLH  &kp DOT  &kp COMMA    &kp M  &layer4_toggle_n    &trans  &trans  &trans  &trans  &trans  &trans
-                              &bt 0  &kp TAB            &trans    &trans  &trans  &trans
+&none     &kp P    &kp O      &kp I    &kp U   &kp Y    &trans  &trans  &trans  &trans  &trans  &trans
+&none  &kp SEMI    &kp L      &kp K    &kp J   &kp H    &trans  &trans  &trans  &trans  &trans  &trans
+&none  &kp FSLH  &kp DOT  &kp COMMA    &kp M   &kp N    &trans  &trans  &trans  &trans  &trans  &trans
+                              &bt 0  &kp TAB  &trans    &trans  &trans  &trans
             >;
         };
 
