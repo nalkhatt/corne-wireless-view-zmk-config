@@ -11,32 +11,32 @@
     combos {
         compatible = "zmk,combos";
 
-        new_combo {
+        new_combo1 {
             bindings = <&kp ENTER>;
             key-positions = <14 15>;
         };
 
-        new_combo {
+        new_combo2 {
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <15 16>;
         };
 
-        new_combo {
+        new_combo3 {
             bindings = <&sk RIGHT_CONTROL>;
             key-positions = <13 16>;
         };
 
-        new_combo {
+        new_combo4 {
             bindings = <&sk LEFT_ALT>;
             key-positions = <3 4>;
         };
 
-        new_combo {
+        new_combo5 {
             bindings = <&kp LEFT_GUI>;
             key-positions = <3 2>;
         };
 
-        new_combo {
+        new_combo6 {
             bindings = <&trans>;
             key-positions = <1 4>;
         };
