@@ -11,46 +11,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        combo_I {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <15 16>;
-        };
-
-        combo_SHIFT {
-            bindings = <&sk LEFT_SHIFT>;
-            key-positions = <13 14>;
-        };
-
-        combo_CTRL {
-            bindings = <&sk LEFT_CONTROL>;
-            key-positions = <13 16>;
-        };
-
-        combo_ALT {
-            bindings = <&sk LEFT_ALT>;
-            key-positions = <13 28>;
-        };
-
-        combo_WIN {
-            bindings = <&kp LEFT_GUI>;
-            key-positions = <13 17>;
-        };
-
-        combo_BACKSPACE {
-            bindings = <&kp DELETE>;
-            key-positions = <25 28>;
-        };
-
-        combo_COMMA {
-            bindings = <&kp COMMA>;
-            key-positions = <27 28>;
-        };
-
-        combo_PERIOD {
-            bindings = <&kp PERIOD>;
-            key-positions = <26 27>;
-        };
     };
 
     behaviors {
